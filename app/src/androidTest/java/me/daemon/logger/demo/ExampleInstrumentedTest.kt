@@ -1,4 +1,4 @@
-package me.daemon.logger
+package me.daemon.logger.demo
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

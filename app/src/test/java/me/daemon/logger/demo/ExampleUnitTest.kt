@@ -1,4 +1,4 @@
-package me.daemon.logger
+package me.daemon.logger.demo
 
 import org.junit.Test
 

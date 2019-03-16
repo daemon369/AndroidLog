@@ -1,4 +1,4 @@
-package me.daemon.logger
+package me.daemon.logger.demo
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
