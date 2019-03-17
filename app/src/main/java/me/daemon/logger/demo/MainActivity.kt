@@ -9,7 +9,7 @@ class MainActivity : AppCompatActivity() {
     private val logger = getLogger(MainActivity::class.java)
 
     init {
-        level = ILogger.Level.VERBOSE
+        level = Level.VERBOSE
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

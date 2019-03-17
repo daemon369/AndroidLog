@@ -3,7 +3,6 @@
 package me.daemon.logger
 
 import android.util.Log
-import me.daemon.logger.ILogger.Level
 
 /**
  * @author daemon

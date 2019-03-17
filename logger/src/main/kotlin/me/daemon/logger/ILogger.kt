@@ -6,15 +6,6 @@ package me.daemon.logger
  */
 interface ILogger {
 
-    enum class Level {
-        VERBOSE,
-        DEBUG,
-        INFO,
-        WARN,
-        ERROR,
-        NONE
-    }
-
     fun setTag(tag: Any): ILogger
 
     fun v(vararg msg: Any)
