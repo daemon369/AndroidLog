@@ -55,43 +55,43 @@ private fun get(): ILogger {
 }
 
 fun v(vararg msg: Any) {
-    get().v(msg)
+    get().v(*msg)
 }
 
-fun v(tag: Any, vararg msg: Any) {
-    get().setTag(tag).v(msg)
+fun v(tag: String, vararg msg: Any) {
+    get().setTag(tag).v(*msg)
 }
 
 fun d(vararg msg: Any) {
-    get().d(msg)
+    get().d(*msg)
 }
 
-fun d(tag: Any, vararg msg: Any) {
-    get().setTag(tag).d(msg)
+fun d(tag: String, vararg msg: Any) {
+    get().setTag(tag).d(*msg)
 }
 
 fun i(vararg msg: Any) {
-    get().i(msg)
+    get().i(*msg)
 }
 
-fun i(tag: Any, vararg msg: Any) {
-    get().setTag(tag).i(msg)
+fun i(tag: String, vararg msg: Any) {
+    get().setTag(tag).i(*msg)
 }
 
 fun w(vararg msg: Any) {
-    get().w(msg)
+    get().w(*msg)
 }
 
-fun w(tag: Any, vararg msg: Any) {
-    get().setTag(tag).w(msg)
+fun w(tag: String, vararg msg: Any) {
+    get().setTag(tag).w(*msg)
 }
 
 fun e(vararg msg: Any) {
-    get().e(msg)
+    get().e(*msg)
 }
 
-fun e(tag: Any, vararg msg: Any) {
-    get().setTag(tag).e(msg)
+fun e(tag: String, vararg msg: Any) {
+    get().setTag(tag).e(*msg)
 }
 
 private fun concatMessage(vararg msg: Any): String {
