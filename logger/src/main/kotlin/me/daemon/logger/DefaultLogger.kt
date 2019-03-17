@@ -6,7 +6,7 @@ import android.util.Log
  * @author daemon
  * @since 2019-03-17 21:56
  */
-class DefaultLogger : ILogger {
+open class DefaultLogger : ILogger {
 
     private var tag: String = ""
 
