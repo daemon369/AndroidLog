@@ -15,14 +15,16 @@ interface ILogger {
         NONE
     }
 
-    fun v(tag: Any, vararg msg: Any)
+    fun setTag(tag: Any): ILogger
 
-    fun d(tag: Any, vararg msg: Any)
+    fun v(vararg msg: Any)
 
-    fun i(tag: Any, vararg msg: Any)
+    fun d(vararg msg: Any)
 
-    fun w(tag: Any, vararg msg: Any)
+    fun i(vararg msg: Any)
 
-    fun e(tag: Any, vararg msg: Any)
+    fun w(vararg msg: Any)
+
+    fun e(vararg msg: Any)
 
 }
