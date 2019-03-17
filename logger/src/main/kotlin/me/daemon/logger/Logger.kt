@@ -2,6 +2,7 @@
 
 package me.daemon.logger
 
+import android.util.Log
 import me.daemon.logger.ILogger.Level
 
 /**
@@ -93,9 +94,18 @@ fun e(tag: Any, vararg msg: Any) {
     get().setTag(tag).e(msg)
 }
 
+private fun concatMessage(vararg msg: Any): String {
+    val sb = StringBuilder()
+    for (m in msg) {
+        sb.append(m)
+    }
+
+    return sb.toString()
+}
+
 class DefaultLogger : ILogger {
 
-    var tag: String = ""
+    private var tag: String = ""
 
     override fun setTag(tag: Any): ILogger {
         this.tag = tag.toString()
@@ -103,18 +113,43 @@ class DefaultLogger : ILogger {
     }
 
     override fun v(vararg msg: Any) {
+        if (level.ordinal > Level.VERBOSE.ordinal) {
+            return
+        }
+
+        Log.v(tag, concatMessage(*msg))
     }
 
     override fun d(vararg msg: Any) {
+        if (level.ordinal > Level.DEBUG.ordinal) {
+            return
+        }
+
+        Log.d(tag, concatMessage(*msg))
     }
 
     override fun i(vararg msg: Any) {
+        if (level.ordinal > Level.INFO.ordinal) {
+            return
+        }
+
+        Log.i(tag, concatMessage(*msg))
     }
 
     override fun w(vararg msg: Any) {
+        if (level.ordinal > Level.WARN.ordinal) {
+            return
+        }
+
+        Log.w(tag, concatMessage(*msg))
     }
 
     override fun e(vararg msg: Any) {
+        if (level.ordinal > Level.ERROR.ordinal) {
+            return
+        }
+
+        Log.e(tag, concatMessage(*msg))
     }
 
 }
