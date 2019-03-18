@@ -17,9 +17,17 @@ private val defaultLogger = DefaultLogger().setTag("Logger")
 /**
  * customized logger
  */
-private var logger: ILogger? = null
+var logger: ILogger? = null
+    set(value) {
+        field = value
+        loggerClass = null
+    }
 
 var loggerClass: Class<out ILogger>? = null
+    set(value) {
+        field = value
+        logger = null
+    }
 
 var tag: String = "Logger"
     set(value) {
