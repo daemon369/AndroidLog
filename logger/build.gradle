@@ -73,3 +73,6 @@ apply from: 'https://gist.githubusercontent.com/daemon369/39f43c9406312f3b565b9f
 bintray {
     override = bintrayOverride
 }
+
+// upload archives to private repository
+apply from: 'https://gist.githubusercontent.com/daemon369/f5b6fe8f6b9b14dc23a5baa17fb2b762/raw/d5f850fd4455199538346399a9213e399460e18e/uploadArchives.gradle'
