@@ -46,14 +46,14 @@ fun getLogger(tag: Any): ILogger {
 }
 
 private fun get(): ILogger {
+    val clz = loggerClass
+    if (logger == null && clz != null) {
+        logger = clz.newInstance().setTag(tag)
+    }
+
     val logger = logger
     if (logger != null) {
         return logger
-    }
-
-    val clz = loggerClass
-    if (clz != null) {
-        return clz.newInstance().setTag(tag)
     }
 
     return defaultLogger.setTag(tag)
