@@ -1,2 +1,2 @@
-# Logger
-Android logger
+# Android Log
+Android log
